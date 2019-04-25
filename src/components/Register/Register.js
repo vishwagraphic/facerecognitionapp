@@ -20,7 +20,7 @@ class Register extends Component{
     }
     onSubmitRegister = () => {
         if(this.state.registerName !== '' && this.state.registerEmail !== '' && this.state.registerPassword !== ''){
-            fetch('http://localhost:5000/register', {
+            fetch('https://salty-plains-83584.herokuapp.com/register', {
                 method: 'post',
                 headers : {'Content-Type' : 'application/json'},
                 body : JSON.stringify({
