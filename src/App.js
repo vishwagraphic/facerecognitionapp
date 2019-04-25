@@ -71,7 +71,6 @@ class App extends Component {
     let image = document.getElementById('inputImage');
     let width = Number(image.width);
     let height = Number(image.height);
-    console.log(clarifaiFace)
     return{
       leftCol: clarifaiFace.left_col * width,
       topRow: clarifaiFace.top_row * height,
@@ -131,7 +130,6 @@ class App extends Component {
       localStorage.setItem('id' , this.state.user.id)
     }
     this.setState({route : route})
-    console.log(this.state.route)
   }
   render() {
     return (
@@ -142,7 +140,6 @@ class App extends Component {
         this.state.route === 'home' ?
         <div>
           <Logo />
-          {this.state.user.name}
           <Rank name={this.state.user.name} entries={this.state.user.entries}/>
           <ImageLinkForm onInputChange={this.onInputChange}  onButtonSubmit={this.onButtonSubmit} />
           <FaceRecognition box={this.state.box} imageUrl={this.state.imageUrl} /> 
